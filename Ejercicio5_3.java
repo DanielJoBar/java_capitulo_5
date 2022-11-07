@@ -10,4 +10,4 @@ public class Ejercicio5_3 {
         while(num<105);
         sc.close();
     }
-} 
+}

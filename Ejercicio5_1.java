@@ -8,4 +8,4 @@ public class Ejercicio5_1 {
         System.out.println(num);
         num = num+5;
     }sc.close();
-}} 
+}}

@@ -8,5 +8,5 @@ public class Ejercicio5_2{
             System.out.println(num);
         }
         sc.close();
-    } 
+    }
 }
