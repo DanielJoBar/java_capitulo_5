@@ -9,6 +9,13 @@ public class Ejercicio5_32 {
         String pares ="";
         long volteado=0;
         long aux = n;
+        do{
+            if(n<0){
+                System.out.print("Usted ha introducido un numero no valido , introduzcalo de nuvo: ");
+                n = sc.nextInt();
+            }
+        }
+        while(n<0);
         while(aux>0){
         volteado=volteado*10+aux%10;
         aux/=10;
