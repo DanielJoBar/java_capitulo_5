@@ -10,8 +10,6 @@ import java.util.Scanner;
 public class Ejercicio5_34 {
     public static void main(String[] args){
     Scanner sc = new Scanner(System.in);
-        //se necesitan variables  para los num impares,pares,una mezcla(resultado),v(int)(es una variable que va almacenando los modulos de los numeros),n1,n2(se hace todo seguido para que vaya en orden(primer numero par del primer numero, primer numero par del se gundo numero.... y asi)),se hace un while para meter un if else para ir componiendo el numero total volteado(npar = npar+(long)(v*math.pow(10,(impares-contimpares)))
-        //contimpares++,mezcla/10
         System.out.print("Introduzca un primer número: ");
         long n1 = sc.nextLong();
         System.out.print("Introduzca otro número: ");
