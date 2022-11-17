@@ -14,7 +14,6 @@ public class Ejercicio5_51 {
         }
         contNum--;
         aux=n;
-        long auxCont=contNum;
         while(contNum>=0){
             aux2=(long)aux/(Math.pow((double)10, (double)contNum));
             if((int)aux2==8||(int)aux2==0){
