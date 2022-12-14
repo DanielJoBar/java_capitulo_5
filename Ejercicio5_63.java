@@ -1,22 +1,57 @@
 import java.util.Scanner;
 public class Ejercicio5_63 {
-    public static void main(String[] args){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Introduzca la altura de la pirámide 1: ");
-        int altura1 =sc.nextInt();
-        System.out.print("Introduzca la altura de la pirámide 2: ");
-        int altura2 = sc.nextInt();
-        int alturaMayor=0;
-        if(altura1>=altura2)
-        alturaMayor =altura1;
-        else
-        alturaMayor=altura2; 
-        for(int i =1 ; i<alturaMayor;i++){
-            for(int espacios=1;espacios<alturaMayor;espacios++){
-                System.out.print(" ");
-            }
-        }
-
-        sc.close();
-    }
+public static void main(String[] args) {
+Scanner s = new Scanner(System.in);
+System.out.print("Introduzca la altura de la primera pirámide: ");
+int alturaP1 = s.nextInt();
+System.out.print("Introduzca la altura de la segunda pirámide: ");
+int alturaP2 = s.nextInt();
+int alturaMaxima = Math.max(alturaP1, alturaP2);
+int espaciosP1 = alturaP1 - 1;
+int espaciosP2 = alturaP2 - 1;
+int baseP1 = alturaP1 * 2 - 1;
+int baseP2 = alturaP2 * 2 - 1;
+int asteriscosP1 = 1;
+int asteriscosP2 = 1;
+for (int i = alturaMaxima; i > 0; i--) {
+// Pirámide 1
+if (i > alturaP1) {
+for (int j = 0; j <= baseP1; j++) {
+System.out.print(" ");
+}
+} else {
+for (int j = 0; j < espaciosP1; j++) {
+System.out.print(" ");
+}
+for (int j = 0; j < asteriscosP1; j++) {
+System.out.print("*");
+}
+for (int j = 0; j <= espaciosP1; j++) {
+System.out.print(" ");
+}
+espaciosP1--;
+asteriscosP1 += 2;
+}
+// Pirámide 2
+if (i > alturaP2) {
+for (int j = 0; j < baseP2; j++) {
+System.out.print(" ");
+}
+} else {
+for (int j = 0; j < espaciosP2; j++) {
+System.out.print(" ");
+}
+for (int j = 0; j < asteriscosP2; j++) {
+System.out.print("*");
+}
+for (int j = 0; j <= espaciosP1; j++) {
+System.out.print(" ");
+}
+espaciosP2--;
+asteriscosP2 += 2;
+}
+System.out.println();
+}
+s.close();
+}
 }
